@@ -1,0 +1,30 @@
+type space
+type object
+ pointer location space
+ type player
+type wedge
+ pointer in space
+ pointer out space
+ type door
+
+event translate player door
+ if subject.location mirrors object.in
+  align subject.location with object.out
+ else
+  if subject.location mirrors object.out
+   align subject.location with object.in
+  else
+   print You aren't anywhere near the $ob.
+
+reality void
+
+space left
+space right
+door gap
+ in left
+ out right
+player Robert
+ location left
+
+controlhook Robert
+cross translate

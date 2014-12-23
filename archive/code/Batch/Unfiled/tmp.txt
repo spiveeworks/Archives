@@ -1,0 +1,5 @@
+foo>dump.txt
+num > dump.txt
+beep & echo hello world
+
+#end#

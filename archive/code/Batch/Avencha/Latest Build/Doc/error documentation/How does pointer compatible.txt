@@ -1,0 +1,9 @@
+How does pointer compatible?
+	location
+		loop partname using parttypen with pointer as _target_
+	acceptable
+		not that
+	conditionally acceptable
+		that
+	explanation
+		You put a property, state or value slot at the end of target, and that is not not not good but not not good bad bad

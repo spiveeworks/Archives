@@ -1,0 +1,50 @@
+type tree
+ pointer rock rock
+ property state glowing dull
+type rock
+ pointer tree tree
+ property state glowing dull
+type player
+
+event affect player rock
+ if object is dull
+  define object as glowing
+  define object.tree as glowing
+  print The rock started glowing.
+  if object.tree is glowing
+   print The tree started glowing.
+ else
+  if object is glowing
+   define object as dull
+   define object.tree as dull
+   print The rock went dull.
+   if object.tree is dull
+    print The tree went dull.
+
+event affect player tree
+ if object is dull
+  define object as glowing
+  define object.rock as glowing
+  print The tree started glowing.
+  if object.rock is glowing
+   print The rock started glowing.
+ else
+  if object is glowing
+   define object as dull
+   define object.rock as dull
+   print The tree went dull.
+   if object.rock is dull
+    print The rock went dull.
+
+reality forest
+player Lyre
+tree tree
+ dull
+ rock rock
+rock rock
+ dull
+ tree tree
+controlhook Lyre
+affect affect
+change affect
+influence affect

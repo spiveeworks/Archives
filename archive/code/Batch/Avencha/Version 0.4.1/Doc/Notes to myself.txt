@@ -1,0 +1,223 @@
+<header>
+Sneak peak teaser for stimulus syntax :D
+
+<code>
+	stimulus image
+	 identity
+	  key
+	  door
+	  padlock
+	stimulus sound
+	 identity
+	  combustion
+	  pat
+	  fizzing
+	  sizzling
+	  crackling
+	  chirp
+	  siren
+	  clatter
+	 length
+	
+	
+	type object
+	 image DefImg
+	type key
+	 DefImg key
+	type door
+	 DefImg door
+	type lock
+	 DefImg padlock
+	
+	with object
+	 project image DefImg
+</code>
+
+as is the nature of this file though, this will be implemented during an 
+	undocumented coding high (UCH)
+and so there will be unmentioned changes to the syntax, so check the readme when it 
+	comes out.
+
+</header>
+This is a section that I've decided to add for detailed/illegible planning to myself.
+I then decided to share it with everyone in case they wanted to know where this was
+	project is going, or if they were interested in programming projects or the
+	like.
+
+This section will be removed from older versions as newer versions come out, so
+	if you just got avencha, that's why this isn't sustained like the todo list
+	and the changelog, so if you revise a version after some time this will be
+	gone.
+This of course means that you won't be able to track the process of making Avencha
+	through this section, you will have to get by on the todo list as it changes
+	and the source code, you creep e.e
+
+Also I don't monitor or revise this one like I do the todo list and the readme, so
+	there is definitely gunna be heaps of stuff that won't make sense, and not
+	even slightly relevant or true, but that's not my problem now, is it?
+
+Okay, actual planning stuff now lol :P
+
+
+#syntax
+
+~txt interpreter
+
+~#type nesting
+either in a super{sub} format, or a sub expand(super) format.
+I like the first one, but the second one is a loooot easier to program.
+It is though a lot more programming and less defining.
+
+Let's test them with our generic door key scenario
+
+type gateway
+ pointer in space
+ pointer out space
+ type gate
+  socket lock lock
+  state open open,closed
+  type door
+  type hatch
+   value height
+~
+
+type lockset
+ property colour red,orange,yellow,lime,green,aqua,cyan,ocean,blue,purple,magenta,rose
+ type lock
+  state locked locked,unlocked
+ type key
+~  
+
+On seeeecond thought, this is awesome, like seriously amazing awesome
+Yeah learts gerw witis
+
+~#General format
+
+[type]
+type [expands type] {
+property {adj;more}
+value;
+}
+notes, abstract properties/values
+
+[object map]
+
+building{
+ room{
+  key;
+  door;
+  sign;
+ }
+}
+
+[event script]
+
+if object.protection == locked {
+ set object.protection = unlocked;
+ if instrument.condition == fragile {
+  destroy instrument;
+  print The key disintegrated.;
+ }
+ print The door unlocked :D;
+} else {
+ print This door is already unlocked.;
+}
+
+~alternative, to complement the indented type format
+
+if object is locked
+ set object unlocked
+ if instrument is fragile
+  destroy instrument
+  print The key disintegrated.
+ print The door unlocked :D
+else
+ print This door is already unlocked.
+~
+
+Yeah so this is still amazing, my mind is made up
+
+Okay now to rewrite it for dynamic type nesting
+
+event unlock gateway key
+ if object.lock is locked
+  if key.colour mirrors door.lock.colour
+   set object.lock unlocked
+   if instrument is fragile
+    destroy instrument
+    print The $in disintegrated.
+   print The $ob unlocked :D
+  else
+   print The $in doesn't fit.
+ else
+  print This $ob is already unlocked.
+~
+
+well that was easy.
+
+#Hooks
+
+They need to deal with information passage, in a dynamic way, this should be painful...
+
+look:
+list of object types with all relevant adjectives... gah
+stimulus would make this a lot more reasonable
+
+Relativistic id's, for logic and convenience
+soooo referal.hook[$n].loop[$l]=$o
+and object[$o].hook[$n]=$l
+
+and then for the standard hook they'd go something like
+stdconsole.object[1].type=$t
+stdconsole.object[1].property[1]=etc
+stdconsole.object[1]
+
+Yeah this is waaaay too complicated, I'mma just stabilize and release
+
+#data format
+
+~interpret
+interpret.lang.choice
+
+interpret.adjective[`adj`].type[$t]=the (state or property) value represented by adj in the context of type t
+interpret.adjective[`adj`].type[$t].property=the id of the property appropriate to adj.
+interpret.adjective[`adj`].type[$t].state=the id of the state appropriate to adj.
+
+interpret.type[`typ`]=the id of typ
+
+interpret.hook.action[`vrb`]=term id of vrb
+
+~console
+
+console.type[$t]=the interpret name of type t
+console.type[$t].property[$p].adjective[$a]=interpret name of adjective a in the context of @t.$p
+console.type[$t].state[$p].adjective[$a]=interpret name of adjective a in the context of @t.!p
+
+~debug
+	note - I need to change the debug variables to something more like precom, cuz they arent really used for debug
+
+debug.type[$t].property[`ppt`]=the property whose debug name is ppt in the context of t
+debug.type[$t].state[`stt`]=the state whose debug name is stt in the context of t
+debug.type[$t].value[`vlu`]=the value whose debug name is vlu in the context of t
+debug.type[$t].pointer[`pnt`]=the pointer whose debug name is pnt in the context of t
+
+debug.event[`evt`]=event id associated with evt
+
+debug.object[`obj`]=object id of whatever you decided to call obj
+
+~object
+object[$o]=type of object o
+object[$o].property[$p]=value held by @o.$p
+
+~hook
+hook.action[$v].using[$o,$i]=event triggered on $o via $i via hook verb $v
+hook.actions=total number of existing actions
+
+~event
+event[$n]=script of n
+event[$n].output[$o]= the string printed when ":" ++ $o ++ ";" is encountered in the event script
+
+~dream
+dream.environment.types=total number of defined types in the environment
+dream.environment.events=total number of defined events in the environment
+dream.environment.objects=total number of defined (but not necesarily still existing) objects

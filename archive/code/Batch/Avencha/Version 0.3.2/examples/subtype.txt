@@ -1,0 +1,13 @@
+type object
+ pointer location space
+ property colour red, green, blue, yellow, magenta, cyan
+ state visible invisible visible
+ type living
+  value health
+  value drating
+  type player
+  type zombie
+ type weapon
+  value sharpness
+  value length
+type space

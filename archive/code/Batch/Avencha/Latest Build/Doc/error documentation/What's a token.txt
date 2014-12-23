@@ -1,0 +1,12 @@
+What's a token?
+	location
+		within a type definition
+	acceptable
+		property
+		state
+		value
+		pointer
+	conditionally acceptable
+		type
+	explanation
+		types contain subtypes and data, not tokens

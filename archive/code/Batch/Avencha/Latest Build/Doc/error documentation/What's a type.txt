@@ -1,0 +1,9 @@
+What's a type?
+	location
+		during the reality setup
+	acceptable
+		a real one
+	conditionally acceptable
+		a conditionally real one?
+	explanation
+		You define objects here, whatever word you put here should actually be the typename of an object you want to make.

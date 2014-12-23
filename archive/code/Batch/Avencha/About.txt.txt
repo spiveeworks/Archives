@@ -1,0 +1,141 @@
+
+#About the dream engine
+
+The dream engine is an engine designed for text based adventures, that can 
+simulate an environment in a dynamic and all purpose way. It is called the dream 
+engine primarily because of the way that it acts similarly to the structure of a 
+dream, which priorities story and sequence more that logic, possibility more 
+than probability. The term was also fitting given the dream like nature of the 
+theorized finished product.
+
+The dream engine was theorized as being the "be all and end all" ultimate 
+attempt to create plenty of planned, attempted and abandoned text based games 
+run as a batch file, (some examples of these would be batch games are "SPUD" and 
+a batch port for RuneScape) and has since been associated with a couple of 
+planned text based games such as "The End Of The World" and "spies"
+
+#Avencha
+
+Avencha was a project designed as an attempt to create a text based environment 
+engine, with a typically poor-english name, to reflect on its focus on partially 
+completing overbearing goals one step at a time, (giving a bunch more stability)
+The original Avencha (0.1.4) only had the capability of defining objects of 
+particular types, and usage commands such as 'use key door' which would print an 
+output and would have the option of 'transforming' the target object (e.g. 
+changing 'door' to 'open_door')
+
+This was quickly expanded over 3 update releases to become a semi-powerful 
+object/data manipulation program.
+The main points missing were inequality comparison (a is greater than b, etc) 
+plugin potential, (allowing for multiple external decision makers to contribute 
+to a simulation, giving, for example bot players and external input) and a 
+dynamic internal time (giving possible realtime, in turn giving multiplayer 
+potential, and more importantly giving systematic events and a parallel for 
+comparison of upcoming events)
+
+#Dream engine 1.0.0
+
+The first version of the actual dream engine.
+
+This is going to have stimulus (a system by which objects can pass data to other 
+objects) and full plugin support using this stimulus process.
+There will also be an internal time process to allow for this stimulus system to 
+work independantly of the player (previously any task in the environment had to 
+be invoked by a players action, allowing for no other 'automity' in a 
+simulation)
+
+#SPUD
+
+This was a theorized and attempted project involving rangen dungeons in a simple 
+grid of dungeon rooms, most gameplay would involve rogue like potions and 
+associated items, with some minimal weapon/battle potential.
+
+This project started well, but not with enough momentum required to surge 
+through the process of creating a complete file-interpreter without being able 
+to test until the very end.
+
+As a result the project died about 200-400 lines in, this was what caused the 
+realization that user feedback and babysteps are excedingly important in indie 
+development. This knowledge is what made Avencha.bat so successful.
+Attempts to work out the project were also extremely important in working out 
+how the dream engine would work, as well as its file interpreter, event 
+scheduling system and object notation. Much of the dream engine is actually just 
+a ripoff of SPUD, and SPUD is being partially recreated in Avencha as 
+"Dungeons and lockpicking"
+
+Also in trying to make this, I made a time API that I still use line for line to 
+this day.
+
+#That other theorized game that didn't work
+
+This one came after SPUD, it was what defined how the object notation of the 
+Dream Engine worked, but absolutely nothing else. At certain times in planning, 
+this game was SPUD, and at others this game was just a potential of the SPUD 
+engine.
+
+This may be picked up by the finished Dream Engine as a fun project, but will 
+probably be abstracized like DaLp
+
+#Grind
+
+Exactly what it sounds like, it was a stat grinder modeled after runescape, 
+again memories are blurred, this, SPUD and that other theorized game that didn't 
+work were basically the same goal, just approached from a different angle and 
+with a different inspiration.
+
+The ultimate goal was an exact text based rip off of Runescape, it started off 
+well, but then it was forgotten for no reason whatsoever.
+
+That other theorized game that didn't work was probably an intended 'non-ripoff' 
+usage of the engine this would create.
+
+A text based runescape would be so awesome in terms of gameplay, and social 
+commentary, that it will probably be done in the Dream Engine as well.
+
+#IRC / Chat influences
+
+In the IRC days, things like the /me command, bots, and *RP-sterisks* lead to a 
+desperate desire to create some system for a chat/RP based MUD type thing, 
+allowing for any amount of access to manipulation of hypothetical objects 
+between multiple users, and in some contexts, for example, the potential for 
+user health, MUD fight scenes, etc.
+
+This started off as IRC bots, made in haskell, which were ditched.
+
+Then a 'LANchat' project was started, then dropped, then started again, then 
+dropped again. It is basically the same as the pattern for the Dream Engines 
+attempts, its just that they were all exactly the same from start to end, just 
+less finished than the next time would be.
+
+Initially this was meant to serve as a filebased chat program for public 
+folders, a system that is more inefficient than can be comprehended.
+
+The ultimate goal, though, was to make a chat system that was mine, so I could 
+easily make batch bots, and virtual objects, and crazy multiplayer less lame RP 
+potential.
+
+The current, and most awesome take of LANchat was being developed, and reached a 
+fairly successful point, but then Avencha started, and took priority.
+
+Ultimately all of the attempts to make the Dream Engine were actually just a 
+different aproach towards this dream, an RP engine :P
+
+#P.S. MineThings
+
+MineThings was an awesome browser-based economic simulation game, which was 
+awesome, and while playing, I theorized a batch based clone, which I could find 
+maybe, but was more focussed on mining things, and geological accuracy, and less 
+about money (CASH MONEY 0_0)
+
+This was actually independant of any other projects, but it was my first attempt 
+at dealing with a text based, player based, rangen, game/simulation in batch, it 
+started well, but it didn't get past the framework phase,
+
+This might be done eventually, or something like it.
+
+One characteristic of the Dream Engine that originated from here was the time 
+api made for SPUD, MineThings dealt with income and stuff, and that meant 
+realtime, and so the batch version was like a singleplayer version, where you 
+also dig with your hands... or something?
+
+It doesn't matter now though, because this idea is all dead.

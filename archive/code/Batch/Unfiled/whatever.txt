@@ -1,0 +1,13 @@
+set
+echo
+call
+for
+goto
+del
+cd
+md
+rd
+time
+date
+cmd
+start

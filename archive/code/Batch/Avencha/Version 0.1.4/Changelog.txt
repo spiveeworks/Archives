@@ -1,0 +1,16 @@
+[Version 0.1.4]
+Added a DEBUG utility, which at the time checked to see if a certain part of the USE coding 
+	was working correctly, but now tells you whether or not there is a spoon.
+[Version 0.1.3]
+LOOK was redesigned to also record what objects you've seen so that USE requires you to have 
+	seen it before you can use it
+This allowed for USE to easily find what object id the target of a USE command had, which 
+	then meant that USE was able to 'transform' the target.
+Open Doors :D
+[Version 0.1.2]
+LOOK and USE exist, also seperated objects and stencils.
+Redesigned LOOK to support stencils, USE is silly, and displays some flavour text when set 
+	object combinations are USEd :D
+[Version 0.1]
+Made stuff exist, inputloop and object variables
+LOOK lists objects and their location, being a piece of flavour text

@@ -1,0 +1,28 @@
+@echo off
+cls
+set #self#=%~f0
+set #break#=¤
+
+for /f "tokens=1,2* delims=/" %%f in ("%*") do (
+set line=%%f
+set public=%%g
+set data=%%h
+)
+
+for /f "tokens=1* delims=." %%f in ("%line%") do (
+set line=%%f
+set param=%%g
+)
+
+if "%line%"=="server" goto :server
+if "%line%"=="client" goto :client
+if "%line%"=="debug" goto :debug
+
+if "%line%"=="" (cmd)
+
+goto :eof
+
+:debug
+set /p debug=
+call %debug%
+goto :debug

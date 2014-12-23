@@ -1,0 +1,33 @@
+
+stimulus image
+ identity
+  key
+  door
+  padlock
+stimulus sound
+ identity
+  combustion
+  pat
+  fizzing
+  sizzling
+  crackling
+  chirp
+  siren
+  clatter
+ length
+
+
+type object
+ image DefImg
+type key
+ DefImg key
+type door
+ DefImg door
+type lock
+ DefImg padlock
+
+with object
+ project image DefImg
+
+event unlock player door key
+ 
