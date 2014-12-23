@@ -1,0 +1,15 @@
+How does loop using parttypen?
+	location
+		loop partname using _parttypen_ with pointer as target
+	acceptable
+		any existing type
+	conditionally acceptable
+		apple
+		button
+		key
+		door
+		lamna
+		falafel
+		chilli_flakes
+	explanation
+		There is no Partty in this pen.

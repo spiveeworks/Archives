@@ -1,0 +1,125 @@
+[my ideas~@Mon 05/08/2013 18:15:39.33]
+you shud make a bomb that blows up the wall and a gun so you can shoot the lock on the door and you shud also make a person that you can trade items with and grenades like cod that wud be awsum
+[Wing~@Thu 08/08/2013 11:19:27.76]
+-
+|-Doors
+||-Usability
+||-Look through doors
+|-Rooms
+||-Different rooms, maybe variable %room% and stuff like if %room%==1 %key1visible%==true
+|-Notes system, eg [>read note 1] comes out [last summer I went camping under the big waterfall of Kent]
+|-change 'stable' to 'sturdy' - makes sense if you think about it
+-
+/<
+-callsign
+[Wing~@Fri 09/08/2013 14:14:53.89]
+|-add a custom maps folder
+|-add something that tells you if you spelt a word wrong
+|-add visibility - open a box, a key becomes visible
+|-add object reference outside an event 'object and 'instrument'
+-
+
+/<
+[Kpaiy~@Mon 12/08/2013  8:49:06.18]
+- Add a visibility/usability feature so items can't be used unless you have already done a certain action
+- Possibility to change location by, for example, walking through the door
+- Could have a clear function to clear the screen if it feels cluttered
+[Wing's map~@Mon 12/08/2013  9:01:25.84]
+set place=room
+call :stencil door;protection{unlocked;locked}
+call :stencil key;condition{stable;fragile}
+call :stencil box;protection{unlocked;locked}colour{brown;white;black}condition{intact;smashed}imploded{imploded}
+call :stencil handle
+call :stencil hammer;state{sturdy;weak}enchanted{enchanted;boring}
+call :stencil magic;magical{magical;boring}
+call :stencil secret;colour{red;green;blue}
+call :stencil lever;colour{red;green;blue}state{pulled;unpulled}
+call :stencil panel;colour{red;green;blue}state{open;closed}
+call :stencil hand
+
+call :output disintegrate The key disintegrated.
+call :output unlock The door unlocked :D
+call :output already This door is already unlocked.
+call :output unlockbx The box opened.
+call :output alreadybx Urna apertus est.
+call :output lckdbxsmsh Well, it was locked...
+call :output smashbx Smashed.
+call :output alrdysmshbox You did this already...
+call :output bxsmshd Um... not happening.
+call :output boss You're a boss.
+call :output alrdybss Bossness is not layerable.
+call :output mgic You cast the magic on the hammer.
+call :output mgic2 Your hammer is now MAGIC
+call :output implosion The box implodes under the might of your magical hammer.
+
+call :event unlock door key if object.protection == locked {set object.protection = unlocked; if instrument.condition == fragile {destroy instrument; print disintegrate;} print unlock;} else {print already;}
+call :event open box handle if object.protection == locked {if object.condition == smashed {print bxsmshd;} else {set object.protection = unlocked; print unlockbx;}} else {print alreadybx;}
+call :event smash box hammer if object.condition == intact {if instrument.enchanted == enchanted {set object.imploded = imploded; set object.condition = smashed; print implosion;} else {set object.protection = unlocked; set object.condition = smashed; print lckdbxsmsh;}} else {print alrdysmshbx;}
+call :event pull lever hand if object.state == unpulled {set object.state = pulled; print boss;} else {print alrdybss;}
+call :event enchant hammer magic if object.enchanted == boring {set object.enchanted = enchanted; print mgic; print mgic2;} else {print alrdymgic;}
+
+call :object door in the wall;locked
+call :object key on the floor;fragile
+call :object box on the ground;locked;brown
+call :object handle on the box
+call :object hammer in your hand;sturdy;boring
+call :object magic floating magically above your head;magical
+call :object lever on the wall;green;unpulled
+call :object panel on the wall;green;closed
+call :object hand on your arm
+[Wing~@Mon 12/08/2013 14:38:31.24]
+|-Actually put the compiler in somewhere where we could access it.
+||-Actually please do this as otherwise we'll have to put LOADS of 'set's in and neither I nor anyone else can be bothered.
+|-PLURALS PLEASE - not There is a star in the universe, There are 2.7 trillion stars in te universe (not to scale)
+||-Don't worry, can already do this with adjectives
+|-have the ability to change the 'is' to 'are'
+/<
+[Wing~@Wed 04/09/2013  9:05:40.08]
+|-with the error stuff (what's a <object>, what kind of thing is <object>),
+||is it possible for a line count? eg what's a <object> (ln 4)
+||Just an idea, make it easier for debugging
+|-
+-
+
+
+
+
+/<
+[Wing~@Thu 05/09/2013 14:21:00.34]
+|-LOOK, please, I'm begging you.
+||I actually don't think that you can
+||program anything playable to anyone
+||who has no prior knowledge of the verbs and nouns
+||-oh, a verb list would be welcome too
+|||maybe a command, verblist, verbs, verb, 
+|||something like that
+||---/
+|-/
+|-A better readme, first-time scripter user 
+||friendly possibly?
+|--/
+|-Another debug command that lists everything
+||except easy to read (no offence, but a 
+||first time scripter (fts :P) would have no idea
+|--/
+|-Yes, I am saying all this because i don't
+||understand it either, but i'm getting there
+|--/
+|-Oh and yes i was purposefully trying to get as
+||much into this heirarchy as possible.
+||LOOKS PRETTY
+|-Fix your grammar. I misspelled print and it said
+||How does expect rint?
+||Come on, you do Latin. it;s supposed to help with your English.
+|--/
+|-LOOK, please please please
+|--/
+/
+
+I may need to work on my listing system,
+it looks horrible
+*5 minutes of frantic list-design-related typing*
+Ah, there we go
+better now
+
+/<

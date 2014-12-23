@@ -1,0 +1,9 @@
+What kind of right is a object[data]?
+	location
+		defining a pointer for an object
+	acceptable
+		right
+	conditionally acceptable
+		any subtype of right
+	explanation
+		whatever an object[data] is, it isn't a type of right, and that is left- uhh, I mean wrong. When you point to an apple, it is either an apple, or a subapple you are pointing at, either point to a different object, change the type of the object you are pointing at, or change what type of object the pointer requires.

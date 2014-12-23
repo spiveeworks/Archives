@@ -1,0 +1,33 @@
+type panel
+ value count
+type button
+ pointer display panel
+type apple
+ pointer source button
+type lever
+ pointer target button
+type player
+
+event push player button
+ create apple called product
+ align product.source with object
+ increase object.display.count by 1
+event pull player lever
+ loop apple using apple with source as object.target
+  destroy apple
+  print A nearby apple explodes.
+
+
+reality test chamber
+
+player Mike
+panel output
+ count 0
+button spawner
+ display output
+lever sink
+ target spawner
+
+controlhook Mike
+push push
+pull pull

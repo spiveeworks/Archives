@@ -1,0 +1,12 @@
+which one is a part?
+	location
+		when destroying an object
+	acceptable
+		subject
+		object
+		instrument
+	conditionally acceptable
+		product
+		piano
+	explanation
+		these are not the droids you are looking for

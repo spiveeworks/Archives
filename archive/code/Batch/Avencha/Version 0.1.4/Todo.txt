@@ -1,0 +1,30 @@
+[Urgent]
+Language interpreter, which will deal with sentences grammatically, and use nouns recorded
+	by LOOK for extra awesomeness
+Ability to delete objects (transforming them to stencil id zero)
+Ability to transform subject of the verb (degrade keys)
+
+[Upcoming]
+More versatile reactions
+Intransitive actions (use open_door)
+support for adjectives, (locked door is still a door, coloured doors and keys, one use 
+	talcum keys)
+
+[Later]
+Actual coded "spaces" instead of the flavoursome location system
+Nested stencils, maybe they'll eventually be called types again
+
+[Still working out]
+Story line
+AI hooks (Player is a programmible object with inputs and outputs)
+Senses for hooks, (and machinery) light, odour, shapes and sound
+Stimulus associated with events, so when a door opens you see it open, rather than being fed
+	flavour text
+Fields for objects (is door locked? Is vase shattered? Is key Yellow?)
+
+[Eventually I guess]
+AI
+Other Autonomity
+Language, visuals (whats the difference between a block of yellow, a yellow triangle and a 
+	yellow man walking, and the word "Yellow" written in bubble writing on the wall)
+Alphabet and symbol shapes.

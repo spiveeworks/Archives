@@ -1,0 +1,78 @@
+type wand
+ value colour
+ value size
+type planet
+ property size large medium small
+ property colour red green blue
+ pointer source wand
+type star
+ property size large medium small
+ property colour red green blue
+type player
+type remote
+ pointer target wand
+
+event destroy player planet
+ destroy object
+ print The planet exploded.
+
+event toggle player wand
+ increase object.colour by 1
+ increase object.size by 2
+ if object.colour equals 3
+  set object.colour to 0
+ if object.size equals 3
+  set object.size to 0
+ if object.size equals 4
+  set object.size to 0
+ if object.colour equals 0
+  print Set colour to red.
+ if object.colour equals 1
+  print Set colour to green
+ if object.colour equals 2
+  print Set colour to blue.
+ if object.size equals 0
+  print Set size to small.
+ if object.size equals 1
+  print Set size to medium.
+ if object.size equals 2
+  print Set size to large.
+
+event wave player wand
+ create planet called product
+ if object.size equals 0
+  define product as small
+ if object.size equals 1
+  define product as medium
+ if object.size equals 2
+  define product as large
+ if object.colour equals 0
+  define product as red
+ if object.colour equals 1
+  define product as green
+ if object.colour equals 2
+  define product as blue
+ print You created a planet.
+
+event use player remote
+ loop planet using planet with source as object.target
+  destroy planet
+  print A planet exploded.
+ print hit
+
+reality Universe
+player Wing
+wand magic
+ colour 0
+ size 0
+remote sink
+ target magic
+controlhook Wing
+wave wave
+use wave
+destroy destroy
+smash destroy
+explode destroy
+kill destroy
+press use
+activate use

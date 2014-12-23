@@ -1,0 +1,1769 @@
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>for /F "delims==" %f in ('set') do (set %f= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set ALLUSERSPROFILE= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set APPDATA= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set asl.log= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set CLASSPATH= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set CommonProgramFiles= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set CommonProgramFiles(x86)= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set CommonProgramW6432= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set COMMPath= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set COMPUTERNAME= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set ComSpec= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set FP_NO_HOST_CHECK= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set HOMEDRIVE= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set HOMEPATH= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set LOCALAPPDATA= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set LOGONSERVER= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set NUMBER_OF_PROCESSORS= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set OS= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set Path= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PATHEXT= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PROCESSOR_ARCHITECTURE= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PROCESSOR_ARCHITEW6432= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PROCESSOR_IDENTIFIER= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PROCESSOR_LEVEL= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PROCESSOR_REVISION= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set ProgramData= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set ProgramFiles= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set ProgramFiles(x86)= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set ProgramW6432= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PROMPT= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PSModulePath= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set PUBLIC= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set QTJAVA= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set SESSIONNAME= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set setappdata.public= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set spivee= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set STVM_BCM5= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set SystemDrive= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set SystemRoot= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set TEMP= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set TMP= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set UATDATA= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set USERDNSDOMAIN= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set USERDOMAIN= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set USERNAME= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set USERPROFILE= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set windir= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set windows_tracing_flags= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>(set windows_tracing_logfile= ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :loop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $part[0]=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set object[1].value[1]=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=!0.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=action 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=! 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=0.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[action] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumstacksize=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "?" (
+set $task=getvalue  
+ set $purpose=if  
+ set $close={ 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "*" (echo hit ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "f" (
+set $task=rnumber  
+ set $purpose=for  
+ set $phase=1  
+ set $close=: 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "!" (
+set $task=partnum  
+ set $purpose=dataleft  
+ set $enum.close=dynamic  
+ set $enum.raw=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "{" (
+if "dataleft" == "testelse" (
+set /a $nest=$nest+1  
+ call set $layer[%$nest%]=else 
+)  
+ if "dataleft" == "skipelse" (
+set $task=skipbrace  
+ set $brace=1  
+ set $purpose=else 
+) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $num= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "}" (call :event.script.track[action].handlenest ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "0.#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[partnum] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "." (
+set $task=field  
+ call set $rid=%$part[]%  
+ set $part=  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if "" == "0" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "0" == "=" set $check=true  
+ if "0" == "+" set $check=true  
+ if "0" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "0" == "=" set $enumoperator=equ  
+ if "0" == "~" set $enumoperator=neq  
+ if "0" == "+" set $enumoperator=pls  
+ if "0" == "-" set $enumoperator=mns  
+ if "0" == "*" set $enumoperator=tms  
+ if "0" == "/" set $enumoperator=int  
+ if "0" == "%" set $enumoperator=mod  
+ if "0" == "&" set $enumoperator=and  
+ if "0" == "^" set $enumoperator=xor  
+ if "0" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (
+set $hold=  
+ set $part=  
+ call set $return=%$part[]%  
+ if "maintain" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $part=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not ".#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=. 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[partnum] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "." == "." (
+set $task=field  
+ call set $rid=%$part[0]%  
+ set $part=  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=# 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[field] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "id" (
+if "#" == "$" (
+set $task=getslotid  
+ set $dtype=property  
+ goto :eof  
+)  
+ if "#" == "!" (
+set $task=getslotid  
+ set $dtype=state  
+ goto :eof  
+)  
+ if "#" == "#" (
+set $task=getslotid  
+ set $dtype=value  
+ goto :eof  
+)  
+ if "#" == "@" (
+set $task=closeterm.id  
+ goto :eof  
+)  
+ if "#" == "*" (
+set $task=closeterm.type  
+ goto :eof  
+) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getslotid] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if "" == "1" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "1" == "=" set $check=true  
+ if "1" == "+" set $check=true  
+ if "1" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "1" == "=" set $enumoperator=equ  
+ if "1" == "~" set $enumoperator=neq  
+ if "1" == "+" set $enumoperator=pls  
+ if "1" == "-" set $enumoperator=mns  
+ if "1" == "*" set $enumoperator=tms  
+ if "1" == "/" set $enumoperator=int  
+ if "1" == "%" set $enumoperator=mod  
+ if "1" == "&" set $enumoperator=and  
+ if "1" == "^" set $enumoperator=xor  
+ if "1" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (if "maintain" == "close" (goto :event.script.closeenum )  else (goto :event.script.switchenumside ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=+ 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getslotid] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if "" == "+" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "+" == "=" set $check=true  
+ if "+" == "+" set $check=true  
+ if "+" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "true" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "+" == "=" set $enumoperator=equ  
+ if "+" == "~" set $enumoperator=neq  
+ if "+" == "+" set $enumoperator=pls  
+ if "+" == "-" set $enumoperator=mns  
+ if "+" == "*" set $enumoperator=tms  
+ if "+" == "/" set $enumoperator=int  
+ if "+" == "%" set $enumoperator=mod  
+ if "+" == "&" set $enumoperator=and  
+ if "+" == "^" set $enumoperator=xor  
+ if "+" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "end" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "close" == "maintain" (if "close" == "close" (goto :event.script.closeenum )  else (goto :event.script.switchenumside ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call set $return=%object[1].value[1]% 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $right=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.closenum.operator[end] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "0" (
+set $enum.raw=  
+ set $enum.bound=  
+ goto :event.script.close[dataleft] 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $base=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $op=+ 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.id=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.type=value 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.slot=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose=dataright 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=getvalue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $close=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enum.close= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=# 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getvalue] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "@" (set $task=partnum ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "#" (set $task=enumber ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "(" (call :event.script.enum.push ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[enumber] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "true" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "dynamic" (
+if ";" == "1" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "true" (
+if "1" == "=" set $enumoperator=equ  
+ if "1" == "~" set $enumoperator=neq  
+ if "1" == "+" set $enumoperator=pls  
+ if "1" == "-" set $enumoperator=mns  
+ if "1" == "*" set $enumoperator=tms  
+ if "1" == "/" set $enumoperator=int  
+ if "1" == "%" set $enumoperator=mod  
+ if "1" == "&" set $enumoperator=and  
+ if "1" == "^" set $enumoperator=xor  
+ if "1" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (if "maintain" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not ";" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[enumber] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "dynamic" (
+if ";" == ";" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "true" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "true" (
+if ";" == "=" set $enumoperator=equ  
+ if ";" == "~" set $enumoperator=neq  
+ if ";" == "+" set $enumoperator=pls  
+ if ";" == "-" set $enumoperator=mns  
+ if ";" == "*" set $enumoperator=tms  
+ if ";" == "/" set $enumoperator=int  
+ if ";" == "%" set $enumoperator=mod  
+ if ";" == "&" set $enumoperator=and  
+ if ";" == "^" set $enumoperator=xor  
+ if ";" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "end" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "close" == "maintain" (if "close" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $right=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.closenum.operator[end] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "0" (
+set $enum.raw=  
+ set $enum.bound=  
+ goto :event.script.close[dataright] 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "+" == "="(set /a $base=) else ( 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "+" == "-"(set /a $return*=-1)) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set /a object[1].value[1]=$base+$return 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $base= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $num= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=action 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>echo 1 
+1
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>pause
+Press any key to continue . . . 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :loop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $part[0]=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set object[1].value[1]=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=!0.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=action 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=! 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=0.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[action] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumstacksize=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "?" (
+set $task=getvalue  
+ set $purpose=if  
+ set $close={ 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "*" (echo hit ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "f" (
+set $task=rnumber  
+ set $purpose=for  
+ set $phase=1  
+ set $close=: 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "!" (
+set $task=partnum  
+ set $purpose=dataleft  
+ set $enum.close=dynamic  
+ set $enum.raw=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "{" (
+if "dataleft" == "testelse" (
+set /a $nest=$nest+1  
+ call set $layer[%$nest%]=else 
+)  
+ if "dataleft" == "skipelse" (
+set $task=skipbrace  
+ set $brace=1  
+ set $purpose=else 
+) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $num= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "}" (call :event.script.track[action].handlenest ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "0.#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[partnum] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "." (
+set $task=field  
+ call set $rid=%$part[]%  
+ set $part=  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "true" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if ";" == "0" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "0" == "=" set $check=true  
+ if "0" == "+" set $check=true  
+ if "0" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "0" == "=" set $enumoperator=equ  
+ if "0" == "~" set $enumoperator=neq  
+ if "0" == "+" set $enumoperator=pls  
+ if "0" == "-" set $enumoperator=mns  
+ if "0" == "*" set $enumoperator=tms  
+ if "0" == "/" set $enumoperator=int  
+ if "0" == "%" set $enumoperator=mod  
+ if "0" == "&" set $enumoperator=and  
+ if "0" == "^" set $enumoperator=xor  
+ if "0" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (
+set $hold=  
+ set $part=  
+ call set $return=%$part[]%  
+ if "maintain" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $part=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not ".#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=. 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[partnum] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "." == "." (
+set $task=field  
+ call set $rid=%$part[0]%  
+ set $part=  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=# 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[field] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "id" (
+if "#" == "$" (
+set $task=getslotid  
+ set $dtype=property  
+ goto :eof  
+)  
+ if "#" == "!" (
+set $task=getslotid  
+ set $dtype=state  
+ goto :eof  
+)  
+ if "#" == "#" (
+set $task=getslotid  
+ set $dtype=value  
+ goto :eof  
+)  
+ if "#" == "@" (
+set $task=closeterm.id  
+ goto :eof  
+)  
+ if "#" == "*" (
+set $task=closeterm.type  
+ goto :eof  
+) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getslotid] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if ";" == "1" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "1" == "=" set $check=true  
+ if "1" == "+" set $check=true  
+ if "1" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "1" == "=" set $enumoperator=equ  
+ if "1" == "~" set $enumoperator=neq  
+ if "1" == "+" set $enumoperator=pls  
+ if "1" == "-" set $enumoperator=mns  
+ if "1" == "*" set $enumoperator=tms  
+ if "1" == "/" set $enumoperator=int  
+ if "1" == "%" set $enumoperator=mod  
+ if "1" == "&" set $enumoperator=and  
+ if "1" == "^" set $enumoperator=xor  
+ if "1" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (if "maintain" == "close" (goto :event.script.closeenum )  else (goto :event.script.switchenumside ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=+ 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getslotid] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if ";" == "+" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "+" == "=" set $check=true  
+ if "+" == "+" set $check=true  
+ if "+" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "true" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "+" == "=" set $enumoperator=equ  
+ if "+" == "~" set $enumoperator=neq  
+ if "+" == "+" set $enumoperator=pls  
+ if "+" == "-" set $enumoperator=mns  
+ if "+" == "*" set $enumoperator=tms  
+ if "+" == "/" set $enumoperator=int  
+ if "+" == "%" set $enumoperator=mod  
+ if "+" == "&" set $enumoperator=and  
+ if "+" == "^" set $enumoperator=xor  
+ if "+" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "end" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "close" == "maintain" (if "close" == "close" (goto :event.script.closeenum )  else (goto :event.script.switchenumside ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call set $return=%object[1].value[1]% 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $right=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.closenum.operator[end] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "0" (
+set $enum.raw=  
+ set $enum.bound=  
+ goto :event.script.close[dataleft] 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $base=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $op=+ 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.id=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.type=value 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.slot=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose=dataright 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=getvalue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $close=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enum.close= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=# 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getvalue] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "@" (set $task=partnum ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "#" (set $task=enumber ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "(" (call :event.script.enum.push ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[enumber] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "true" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "dynamic" (
+if ";" == "1" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "true" (
+if "1" == "=" set $enumoperator=equ  
+ if "1" == "~" set $enumoperator=neq  
+ if "1" == "+" set $enumoperator=pls  
+ if "1" == "-" set $enumoperator=mns  
+ if "1" == "*" set $enumoperator=tms  
+ if "1" == "/" set $enumoperator=int  
+ if "1" == "%" set $enumoperator=mod  
+ if "1" == "&" set $enumoperator=and  
+ if "1" == "^" set $enumoperator=xor  
+ if "1" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (if "maintain" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not ";" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[enumber] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "dynamic" (
+if ";" == ";" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "true" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "true" (
+if ";" == "=" set $enumoperator=equ  
+ if ";" == "~" set $enumoperator=neq  
+ if ";" == "+" set $enumoperator=pls  
+ if ";" == "-" set $enumoperator=mns  
+ if ";" == "*" set $enumoperator=tms  
+ if ";" == "/" set $enumoperator=int  
+ if ";" == "%" set $enumoperator=mod  
+ if ";" == "&" set $enumoperator=and  
+ if ";" == "^" set $enumoperator=xor  
+ if ";" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "end" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "close" == "maintain" (if "close" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $right=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.closenum.operator[end] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "0" (
+set $enum.raw=  
+ set $enum.bound=  
+ goto :event.script.close[dataright] 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "+" == "="(set /a $base=) else ( 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "+" == "-"(set /a $return*=-1)) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set /a object[1].value[1]=$base+$return 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $base= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $num= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=action 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>echo 1 
+1
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>pause
+Press any key to continue . . . 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :loop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $part[0]=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set object[1].value[1]=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=!0.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=action 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=! 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=0.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[action] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumstacksize=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "?" (
+set $task=getvalue  
+ set $purpose=if  
+ set $close={ 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "*" (echo hit ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "f" (
+set $task=rnumber  
+ set $purpose=for  
+ set $phase=1  
+ set $close=: 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "!" (
+set $task=partnum  
+ set $purpose=dataleft  
+ set $enum.close=dynamic  
+ set $enum.raw=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "{" (
+if "dataleft" == "testelse" (
+set /a $nest=$nest+1  
+ call set $layer[%$nest%]=else 
+)  
+ if "dataleft" == "skipelse" (
+set $task=skipbrace  
+ set $brace=1  
+ set $purpose=else 
+) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $num= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "!" == "}" (call :event.script.track[action].handlenest ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "0.#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=.#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[partnum] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "." (
+set $task=field  
+ call set $rid=%$part[]%  
+ set $part=  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "true" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if ";" == "0" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "0" == "=" set $check=true  
+ if "0" == "+" set $check=true  
+ if "0" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "0" == "=" set $enumoperator=equ  
+ if "0" == "~" set $enumoperator=neq  
+ if "0" == "+" set $enumoperator=pls  
+ if "0" == "-" set $enumoperator=mns  
+ if "0" == "*" set $enumoperator=tms  
+ if "0" == "/" set $enumoperator=int  
+ if "0" == "%" set $enumoperator=mod  
+ if "0" == "&" set $enumoperator=and  
+ if "0" == "^" set $enumoperator=xor  
+ if "0" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (
+set $hold=  
+ set $part=  
+ call set $return=%$part[]%  
+ if "maintain" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $part=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not ".#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=. 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=#1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[partnum] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "." == "." (
+set $task=field  
+ call set $rid=%$part[0]%  
+ set $part=  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "#1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=# 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=1+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[field] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "id" (
+if "#" == "$" (
+set $task=getslotid  
+ set $dtype=property  
+ goto :eof  
+)  
+ if "#" == "!" (
+set $task=getslotid  
+ set $dtype=state  
+ goto :eof  
+)  
+ if "#" == "#" (
+set $task=getslotid  
+ set $dtype=value  
+ goto :eof  
+)  
+ if "#" == "@" (
+set $task=closeterm.id  
+ goto :eof  
+)  
+ if "#" == "*" (
+set $task=closeterm.type  
+ goto :eof  
+) 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "1+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=+#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getslotid] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if ";" == "1" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "1" == "=" set $check=true  
+ if "1" == "+" set $check=true  
+ if "1" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "1" == "=" set $enumoperator=equ  
+ if "1" == "~" set $enumoperator=neq  
+ if "1" == "+" set $enumoperator=pls  
+ if "1" == "-" set $enumoperator=mns  
+ if "1" == "*" set $enumoperator=tms  
+ if "1" == "/" set $enumoperator=int  
+ if "1" == "%" set $enumoperator=mod  
+ if "1" == "&" set $enumoperator=and  
+ if "1" == "^" set $enumoperator=xor  
+ if "1" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (if "maintain" == "close" (goto :event.script.closeenum )  else (goto :event.script.switchenumside ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "+#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=+ 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=#1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getslotid] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "dynamic" == "dynamic" (
+if ";" == "+" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "dataleft" == "dataleft" (
+if "+" == "=" set $check=true  
+ if "+" == "+" set $check=true  
+ if "+" == "-" set $check=true 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "true" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "true" == "true" (
+if "+" == "=" set $enumoperator=equ  
+ if "+" == "~" set $enumoperator=neq  
+ if "+" == "+" set $enumoperator=pls  
+ if "+" == "-" set $enumoperator=mns  
+ if "+" == "*" set $enumoperator=tms  
+ if "+" == "/" set $enumoperator=int  
+ if "+" == "%" set $enumoperator=mod  
+ if "+" == "&" set $enumoperator=and  
+ if "+" == "^" set $enumoperator=xor  
+ if "+" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "end" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "close" == "maintain" (if "close" == "close" (goto :event.script.closeenum )  else (goto :event.script.switchenumside ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call set $return=%object[1].value[1]% 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $right=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.closenum.operator[end] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "0" (
+set $enum.raw=  
+ set $enum.bound=  
+ goto :event.script.close[dataleft] 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $base=0 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $op=+ 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.id=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.type=value 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $data.slot=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose=dataright 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=getvalue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $close=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enum.close= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "#1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=# 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=1; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[getvalue] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "@" (set $task=partnum ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "#" (set $task=enumber ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "#" == "(" (call :event.script.enum.push ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "1;" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[enumber] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "true" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "dynamic" (
+if ";" == "1" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "false" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "true" (
+if "1" == "=" set $enumoperator=equ  
+ if "1" == "~" set $enumoperator=neq  
+ if "1" == "+" set $enumoperator=pls  
+ if "1" == "-" set $enumoperator=mns  
+ if "1" == "*" set $enumoperator=tms  
+ if "1" == "/" set $enumoperator=int  
+ if "1" == "%" set $enumoperator=mod  
+ if "1" == "&" set $enumoperator=and  
+ if "1" == "^" set $enumoperator=xor  
+ if "1" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "maintain" == "maintain" (if "maintain" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not ";" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $char=; 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $script= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.track[enumber] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkcontinue 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate=maintain 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $estate.cr= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (call :event.script.enum.checkclose ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "" == "right" (
+if "false" == "true" (set $estate=close )  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.readop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $enumoperator= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.enum.checkclose 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $check=false 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "dynamic" (
+if ";" == ";" set $check=true  
+ goto :eof 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "true" == "true" set $enumoperator=end 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "true" (
+if ";" == "=" set $enumoperator=equ  
+ if ";" == "~" set $enumoperator=neq  
+ if ";" == "+" set $enumoperator=pls  
+ if ";" == "-" set $enumoperator=mns  
+ if ";" == "*" set $enumoperator=tms  
+ if ";" == "/" set $enumoperator=int  
+ if ";" == "%" set $enumoperator=mod  
+ if ";" == "&" set $enumoperator=and  
+ if ";" == "^" set $enumoperator=xor  
+ if ";" == "|" set $enumoperator=bor 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if defined $enumoperator (if "end" == "end" (
+set $estate=close  
+ set $estate.cr=.raw 
+)  else (set $estate=switch ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "close" == "maintain" (if "close" == "close" (goto :event.script.closeenum.raw )  else (goto :event.script.switchenumside.raw ) ) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $right=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>call :event.script.closenum.operator[end] 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $return=1 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "0" == "0" (
+set $enum.raw=  
+ set $enum.bound=  
+ goto :event.script.close[dataright] 
+) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "+" == "="(set /a $base=) else ( 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if "+" == "-"(set /a $return*=-1)) 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set /a object[1].value[1]=$base+$return 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $base= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $num= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $slotid= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $task=action 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>set $purpose= 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>if not "" == "" goto :event.scriptloop 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>goto :eof 
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>echo 1 
+1
+
+C:\Users\jarvis.carroll\Documents\Codez\Batch\Avencha\Latest Build>pause
+Press any key to continue . . . 

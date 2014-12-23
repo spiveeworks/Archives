@@ -1,0 +1,9 @@
+How does do steeze?
+	location
+		root layer
+	acceptable
+		type
+		event
+		reality
+	explanation
+		in the root layer you initiate data structures, not steeze
