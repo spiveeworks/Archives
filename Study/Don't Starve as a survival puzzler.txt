@@ -1,0 +1,62 @@
+
+BANANAS
+
+
+
+
+
+
+Don't starve features bananas, but the crafting system isn't integrated enough for the bananas to be interesting, rather instead it is easier to just avoid having too many bananas. (linearity)
+
+if the crafting system were more integrated, so meat could do more things with more ingredients, in a way that doesn't create fear of inefficient spending policy, then the bananas would be more effective:
+
+
+Multiple action alternatives, all of which are worth doing, not depending on a central reagent (like berries) to forward recipes or efficiency, unless of course, the berries are abundantly available, and this is a deliberate attempt to reduce their supply voluntarily.
+HOWEVER a berry free alternative still needs to be survivably available.
+
+the problem with Don't Starve is its dependence on optimization, which, with linear optimization systems, and dependence on harsh supply to create challenge, leads to it being a game of "I need to find this resource before my lack of it dries up all my other resources, thus killing me."
+ie. enough supply wins you the game, leading to lack of supply creating the challenge, leading to specific methods winning out over other methods; 
+ie. no improvisation, no creativity, no self-satisfaction from flavour choices. It is a ran-gen puzzle game, mixed with low-fidelity world exploration.
+
+What I want however, is a ran-gen organisation and decision-making game, a game about solving tight situations and establishing usable infrastructure with the leftover resources.
+
+
+
+
+SUGGESTED SOLUTION + IMPLEMENTATION
+
+1.	Low dependence on staging;
+
+Resources shouldn't be turned into 'advanced resources', at least not in early stages of development, as these don't add much depth other than compacting resources to overcome limitations within your own crafting system. 
+(If that is a problem then you know that right now your scale for resource handling does not match your scale for crafting steps, and that this problem will keep on coming back until you change the crafting system.)
+Many simple resources should be held, and selected from in complex and balanced crafting routines, rather than the classic stone -> more stone -> tool -> better tool system that many resource systems rely on, or equivalent.
+Basically this is so that as a designer you don't need to work out how to integrate items with different levels of strength and balance, because this rule is simply... don't get ahead of yourself.
+Making primitive resources work together makes it much easier to add more primitive resources, which is after all, the simplest way of creating variety, and also of avoiding further staged resource issues.
+
+If there comes a time when the game simply won't expand sideways any more, good! Any more and your resources will start to show trends, and "same resource different name" isn't good.
+Now try to expand ONE stage forward, without slacking off on the level of integration involved.
+
+2.	EVERYTHING is optional.
+
+in other words: 
+There is no optimum choice, and there is always a choice.
+	AND
+Have all actions function as supplementary OR secondary. 
+
+(I'm looking at YOU Mojang!)
+
+Variety in ways that all direct ends can be met is vital, such as hunger/health, (hunger is usually well done in survival games, but that means that hunger is far over-understood in videogames.)
+otherwise it isn't an end, but rather a safe-point. Games that feature tiredness usually have you falling back to a safe point, before journeying out to attempt to satisfy other needs.
+Ends however are about trying to race against your own hunger to satisfy it in the most convenient way, and the difference between these is actually in whether or not there is choice.
+
+3.	Be CONSISTENT
+
+In general, things should have a consistent supply/demand ratio, so EVERYTHING is short, or EVERYTHING is in surplus, this way the balance of your game determines the DIFFICULTY of your game, not the LUCK.
+The last thing you want, and the first thing that most survival-game designers seem to want, is the entire game being choked up by a complete lack of one resource until the player commits themselves to an hour of searching through areas for that resource UNLESS you know that you can make an interesting or detailed journey out of it, ie. pre-designed detailed world, or challenging yet balanced yet not a single bit repetitive gameplay systems interrupting the journey.
+
+There are no serious exceptions to this rule, cases such as story goals are simply explained by the fact that you only need to meet the requirement once in the entire game, and so you should find one fifth as much as something needed at five points in a typical game, etc.
+The end condition of the game should be accessible by the time that the player is ready for it at the latest, if it wasn't obvious.
+
+HOWEVER if something is completely secondary, such as an easter egg, it is free from this rule, if it is something completely without demand, such as an aesthetic, it is free from this rule, and so on.
+
+
