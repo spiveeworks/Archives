@@ -1,0 +1,68 @@
+
+
+
+FACTIONS
+
+Operator
+
+Independent
+
+Free
+
+Guard
+
+Criminal
+	(Mongrel, swab)
+~
+
+
+
+
+
+MECHANISMS
+
+
+#DOL
+
+dynamic object locator
+
+A location held by the server.
+The server can be told to chain DOLs to eachother, allowing non-moving DOLs to be carried by moving DOLs such as a scope.
+Chaining must be consented by both DOLs' 'owners'
+
+~Resource DOL~
+
+Can be used to instruct the server to initiate utilities at the held location. 
+The utility uses the DOL to access the environment at that location.
+Resources are finite, and can only be spawned if that same resource has been released (deleted by the server) or has not yet been allocated.
+The resource DOL is simply a vapour-compatible method of distributing utilities 'fairly'.
+
+   ~Scope~
+
+Functions like a specialised Utility, but came first in development, as it is a central feature of both the vapour network and the palace interface;
+for this reason a lot more scopes are maintained by the server than resources.
+A Scope is an interfacing object that feeds its local area to a connection known by the server. 
+The scope contains flags that can inform other objects of certain things at the user's intention, but the details of the connection are held privately by the server to maintain anonymity.
+Scopes are completely mobile by default and can have specialised functions all of which are under the control of the user.
+
+ ~Effect Key~
+
+These special DOLs can trigger special functions in nearby objects, if the conditions (which are at the server's discretion) are met.
+The object itself contains an id that distinguishes it, which links to a private id referencing the effect: This effect id is then passed on to any objects nearby that have specified that they are waiting for the effect id specifically, and those objects then initiate their special functions.
+
+
+
+
+
+
+#Entry Point
+
+Entry points serve as spawn points for scopes, from which they must move in order to progress.
+
+~Resource entry~
+
+These pseudo-entry points are static object locators from which Resource DOLs can be created.
+
+A resource entry point can be held by a scope, in which case the scope will be given a resource DOL whenever one becomes available. 
+Resources will be evenly distributed between 
+

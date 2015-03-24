@@ -1,0 +1,83 @@
+
+
+
+
+
+::::::::::::::
+:: OUTCOMES ::
+::::::::::::::
+
+~An RTS that doesn't rely on ability to multi/micromanage to create difficulty, but rather be as largely as possible a game about what you do rather than whether you do it.
+
+	To do this with the incorporation of growing difficulty, where a skill level refers to how large your force is, and thus how much you need to take advantage of, in order to create an easily reachable upper limit on how much one can gain through precise and efficient multitasking, without creating a global limit to the complexity of the game.
+
+	thus the game will not avoid user tasks, but will stagger them to make them master-able, and never provide more opportunity for efficiency than what your opponent is likely also capable of.
+
+~An RTS in which racial similarity is minimal, in unit availability, research trees, intra-racial characteristics, inter-ratial relationships and all strategy thence.
+
+~An RTS that doesn't provide an alternative to having everything you own at its maximum potential at all times.
+
+~An RTS that doesn't rely on a nuclear/imperative structure, or on simple nuclear branches from a central structure, but rather creates complex interactions between buildings all of which are non-crucial.
+
+	So CC with a barracks, vehicle centre and special units centre is a no.
+
+~An RTS that doesn't give you supreme power once you grow to a certain size: ability to grow should be limited by mission context, and travel should be self defeating or dependent on a requisition system.
+
+
+
+
+
+::::::::::::::
+:: Economic ::
+::::::::::::::
+
+Large variety of complex manufacturing processes per race, to a point where a mission will usually involve the construction of one processing setup, and shipment in and out will trade that production for things needed for the battle, such as defenses or arms.
+
+Mission Campaigns could involve a large campaign map in which your setup in each mission has a visible effect on the resource availability of future missions.
+
+Focus isn't on turning the resources available into a fully independent military factory, but rather on taking what is available to you in terms of requisition and using it strategically.
+
+Different types of production:
+
+~Domestic
+
+Things required to set up or facilitate the domestic urbanisation of areas for the supply of population.
+
+Will be required if on-site accommodation is desired, but mainly for shipping back to strategic or story-based cities and settlements.
+
+Will be general, so "cleaning goods" rather than "soap"
+
+Will have three demand categories: static, degrading and consumable.
+
+Static: things that are mostly considered permanent, such as furniture, and are usually needed for growth, but following demand is considerably small.
+
+Degrading: things like utilities, that are used regularly and will disappear eventually, but are not needed for their constant supply due to ability to be reused.
+
+Consumable: things like food or toothpaste, that are always required and will need to be supplied.
+
+~Construction
+
+Things used for building buildings of any nature, whether domestic industrial or military.
+
+Are categorized in terms of whether they are required per building or per worker/vehicle.
+
+~Industrial
+
+Things involved in processes such as mining/harvesting or manufacturing. The industrial line is where all other goods come from, and is therefore a common need in a civilisation.
+
+~Military
+
+Everything involved in the strategic destruction of an alien group, whether it be defensive offensive or tactical.
+
+Firearms, protective gearing, engineering, explosives, grenades etc. all come under military, as well as things such as melee + assault weaponry and tactical items liiiiike gas protection or night vision ( :O )
+
+
+
+
+
+
+
+
+
+
+
