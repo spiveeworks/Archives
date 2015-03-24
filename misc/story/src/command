@@ -1,0 +1,189 @@
+#include <string>
+#include "spivee"
+#include "header/command.h"
+
+/*
+#ifndef BYTEDEF
+typedef unsigned char byte;
+#define BYTEDEF
+#endif
+*/
+namespace spiv 
+	{
+
+class contextstack;
+
+std::string gettoken (std::string& input, const std::string& delim) {//returns the first token, after erasing it from the original std::string
+	unsigned int onset = input.find (delim, 0), offset = delim.length ();
+	std::string token = input.substr(0, onset);
+	input.erase (0, onset);
+	unsigned i = 0; 
+	while 
+		(input.substr (i, offset) == delim) 
+		i += offset;
+	input.erase (0, i);
+	return token;
+}
+
+bool trycommand (std::string& input, const std::string& comp, const std::string& delim) {
+	unsigned offset = delim.length (), onset = comp.length ();
+	if (input.substr (0,onset) == comp) 
+	{
+		unsigned int i = onset; 
+		while 
+			(input.substr (i, offset) == delim) 
+			i += offset;  
+		if (i == onset && onset < input.size ()) return false;
+		input.erase (0, i);
+		return true;
+	}
+	else return false;
+}
+
+// fluidcommand
+
+bool fluidcommand::attempt (std::string delim, std::string input) {
+	bool check = trycommand (input, invokes, delim);
+	if (check) (*script)(input);
+	return check;
+}
+
+fluidcommand::fluidcommand (std::string invoker, unsigned (*func)(std::string)) {
+	invokes = invoker;
+	script = func;
+}
+
+// command
+
+bool command::compare (std::string input) {
+	bool check = trycommand (input, invokes, delim);
+	if (check) prevarg = input;
+	return check;
+}
+
+bool command::compare (std::string input, std::string odelim) {
+	bool check = trycommand (input, invokes, odelim);
+	if (check) prevarg = input;
+	return check;
+}
+
+
+command::command (std::string invoker, unsigned (*func)(std::string), std::string delimiter) {
+	invokes = invoker;
+	delim = delimiter;
+	script = func;
+}
+
+command::command (fluidcommand base, std::string delimiter) {
+	invokes = base.invokes;
+	delim = delimiter;
+	script = base.script;
+}
+
+
+
+// command context
+
+unsigned context::operator() (std::string input, std::string delim) {
+	std::string args = input, command = gettoken(args, delim);
+	for (unsigned i = 0; i < size; i++) {
+		if ( available[i] -> getstring() == command ) 
+			return (*available[i])(args);
+	}
+	return (*defact)(input);
+}
+
+unsigned context::operator() (std::string input) {
+	for (unsigned i = 0; i < size; i++) {
+		if ( available[i] -> compare (input) ) 
+			return (*available[i]) ();
+	}
+	return (*defact)(input);
+}
+
+context::context (std::string* invokes, unsigned (**scripts)(std::string), std::string delim, unsigned number) {
+	size = number;
+	available = new command* [number];
+	for (unsigned i = 0; i < number; i++) 
+	{
+		available[i] = new command (invokes[i], scripts[i], delim);
+	}
+}
+
+void context::append (command* toadd) {
+	command** next = new command* [size + 1];
+	copy (size, available, next);
+	next [size++] = toadd;
+	delete[] available;
+	available = next;
+}
+
+void context::append (context toadd) {
+	command** next = new command* [size + toadd.size];
+	copy (size, available, next);
+	copy (toadd.size, toadd.available, (next + size));
+	size += toadd.size;
+	delete[] available;
+	available = next;
+}
+
+
+
+// context stack
+
+void contextstack::push (context& level) {
+	context** next = new context* [length + 1];
+	copy (length, stack, next);
+	next [++length] = &level;
+	delete[] stack;
+	stack = next;
+}
+
+signed contextstack::pop (unsigned n) {
+	signed retval;
+	retval = length - n;
+	if (retval >= 0) 
+	{
+		length = 0;
+		delete[] stack;
+		stack = 0;
+		return n;
+	}
+	else
+	{
+		length -= n;
+		context** prev = new context* [length];
+		copy (length, stack, prev);
+		delete[] stack;
+		stack = prev;
+		return length;
+	}
+}
+
+void contextstack::operator() (std::string input/*, std::string delim*/) {
+	pop (
+		(*stack[length-1]) (input)
+	);
+}
+
+
+
+	}
+
+spiv::context operator+ (spiv::context base, spiv::command* append) {
+	base.append (append);
+	return base;
+}
+spiv::context operator+ (spiv::context base, spiv::context append) {
+	base.append (append);
+	return base;
+}
+
+spiv::context operator+= (spiv::context& base, spiv::command* append) {
+	base.append (append);
+	return base;
+}
+spiv::context operator+= (spiv::context& base, spiv::context append) {
+	base.append (append);
+	return base;
+}
