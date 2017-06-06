@@ -1,1 +1,0 @@
-o irc.esper.net 5555

@@ -1,9 +1,0 @@
-What kind of thing is head?
-	location
-		object definition
-	acceptable
-		any adjectival word
-	conditionally acceptable
-		any word that isn't exactly adjectival, that you (grammatically incorrectlyly) defined as an adjective, because who is be needing that them grammar.?
-	explanation
-		This is wheres the word of describe place is, your grammaticaally adjective here is where to go.

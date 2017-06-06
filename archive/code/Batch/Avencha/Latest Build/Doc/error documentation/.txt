@@ -1,9 +1,0 @@
-?
-	location
-		~
-	acceptable
-		~
-	conditionally acceptable
-		~
-	explanation
-		~

@@ -1,9 +1,0 @@
-Kill a part what?
-	location
-		When destroying an object
-	acceptable
-		 
-	conditionally acceptable
-			
-	explanation
-		There is no spoon

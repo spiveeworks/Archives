@@ -1,9 +1,0 @@
-How make typen?
-	location
-		CREATE command
-	acceptable
-		any existing object type
-	conditionally acceptable
-		T_T
-	explanation
-		you can't be typen that
