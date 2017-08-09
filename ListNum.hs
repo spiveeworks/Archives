@@ -1,5 +1,5 @@
-data IntIsh = IntIsh [()] [()]
-data RedInt = RedInt Bool [()]
+data IntIsh = IntIsh [()] [()] deriving (Show)
+data RedInt = RedInt Bool [()] deriving (Show)
 
 reduce :: IntIsh -> RedInt
 reduce (IntIsh x []) = RedInt False x  -- False is positive so that zero is (False, [])
@@ -17,7 +17,7 @@ fromNatural x = () : fromNatural (x - 1)
 instance Num RedInt where
   x + y = reduce (fromReduced x + fromReduced y)
 
-  RedInt sx x * RedInt sy y = RedInt (sx != sy) [() | () <- x, () <- y]
+  RedInt sx x * RedInt sy y = RedInt (sx /= sy) [() | () <- x, () <- y]
 
   abs (RedInt _ x) = RedInt False x
 
