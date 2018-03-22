@@ -1,0 +1,52 @@
+Theorem double_induction:
+  forall P: nat -> nat -> Prop,
+    forall base: P 0 0,
+      forall ind_x: (forall x y: nat, P x y -> P (S x) y),
+        forall ind_y: (forall x y: nat, P x y -> P x (S y)),
+          forall x y: nat, P x y.
+Proof.
+  intros.
+  elim x.
+    elim y.
+      exact base.
+
+      intros.
+      exact (ind_y 0 n H).
+
+    intros.
+    exact (ind_x n y H).
+Qed.
+
+Theorem succ_adds_1:
+  forall x y: nat, x + S y = S x + y.
+Proof.
+  intros.
+  elim x.
+    reflexivity.
+
+    simpl.
+    intros.
+    rewrite H.
+    reflexivity.
+Qed.
+
+Theorem plus_commutes:
+  forall x y: nat,
+    x + y = y + x.
+Proof.
+  intros.
+  refine (double_induction (fun (x y: nat) => x + y = y + x) _ _ _ x y).
+    reflexivity.
+
+    intros.
+    simpl.
+    rewrite H.
+
+    rewrite (succ_adds_1 y0 x0).
+    reflexivity.
+
+    intros.
+    simpl.
+    rewrite <- H.
+    exact (succ_adds_1 x0 y0).
+Qed.

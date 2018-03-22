@@ -1,0 +1,19 @@
+Theorem refutations_equal_false:
+  forall A: Prop,
+    ~A <-> (A <-> False).
+Proof.
+  intros A.
+  unfold iff.
+  refine (conj _ _).
+    unfold not.
+    intros refutation.
+    refine (conj _ _).
+      exact refutation.
+
+      intros absurd.
+      case absurd.
+
+    intros equiv.
+    destruct equiv as [refutation _].
+    exact refutation.
+Qed.

@@ -1,0 +1,58 @@
+Fixpoint nat_injection (A: Set) (Oa: A) (f: A -> A) (n: nat) : A :=
+  match n with
+    O => Oa
+  | S x => f (nat_injection A Oa f x)
+  end.
+
+Theorem equality_is_symmetric:
+  forall x y: Set,
+    x = y -> y = x.
+Proof.
+  intros x y x_y.
+  rewrite x_y.
+  reflexivity.
+Qed.
+
+Theorem inductive_theorem:
+  forall A: Set,
+    (
+      exists (Oa: A) (f: A -> A),
+        (forall x y: A, f x = f y -> x = y)
+        /\ (forall x: A, Oa <> f x)
+    )
+      -> exists (Oa: A) (f: A -> A),
+        forall x y: nat,
+          (nat_injection A Oa f x) = (nat_injection A Oa f y)
+            -> x = y.
+Proof.
+  intros A.
+  unfold not.
+  intros A_condition.
+  (* the condition is that A has a reflexive injection with at least one
+     element missing from its range *)
+  destruct A_condition as [Oa A_condition'].
+  destruct A_condition' as [f A_condition''].
+  destruct A_condition'' as [f_is_injective Oa_isn't_a_value].
+
+  refine (ex_intro _ Oa _).
+  refine (ex_intro _ f _).
+  intros x y.
+  elim x; elim y.
+
+  reflexivity.
+
+  simpl.
+  congruence.
+
+  simpl.
+  congruence.
+
+  simpl.
+  intros n IHn m IHm.
+  intros base.
+  case m; case n.
+
+  reflexivity.
+
+  intros n'.
+  (*double induction always kills me*)

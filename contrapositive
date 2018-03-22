@@ -1,0 +1,25 @@
+Theorem contrapositive:
+  forall A B: Prop,
+    (A -> B) -> ~B -> ~A.
+Proof.
+  intros A B.
+  intros a_implies_b.
+  unfold not.
+  intros refute_b.
+  intros suppose_a.
+  pose (therefore_b := a_implies_b suppose_a).
+  case (refute_b therefore_b).
+Qed.
+
+
+
+
+Theorem implication_disjunct:
+  forall A B: Prop,
+    (A -> B) <-> A \/ ~B.
+Proof.
+  intros A B.
+  unfold iff, not.
+  refine (conj _ _).
+    intros a_implies_b.
+    (* nvm lol *)

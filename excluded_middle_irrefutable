@@ -1,0 +1,53 @@
+
+Theorem disjunct_premises_expand: forall A B C: Prop,
+  (A \/ B -> C) -> (A -> C) /\ (B -> C).
+Proof.
+  intros A B C.
+  intros a_or_b_gives_c.
+  refine (conj _ _).
+
+  intros proof_of_a.
+  pose (proof_of_either := or_introl proof_of_a: A \/ B).
+  pose (proof_of_c := a_or_b_gives_c proof_of_either).
+  exact proof_of_c.
+
+  intros proof_of_b.
+  pose (proof_of_either := or_intror proof_of_b: A \/ B).
+  pose (proof_of_c := a_or_b_gives_c proof_of_either).
+  exact proof_of_c.
+Qed.
+
+Theorem conjunct_implications_factorise: forall A B C: Prop,
+  (A -> C) /\ (B -> C) -> (A \/ B) -> C.
+  intros A B C.
+
+  intros a_or_b_gives_c.
+  destruct a_or_b_gives_c as [a_gives_c b_gives_c].
+  intros proof_of_either.
+  case proof_of_either.
+
+  exact a_gives_c.
+
+  exact b_gives_c.
+Qed.
+
+Theorem distribute_implication: forall A B C: Prop,
+  (A \/ B -> C) <-> (A -> C) /\ (B -> C).
+Proof.
+  intros A B C.
+  unfold iff.
+  refine (conj _ _).
+    exact (disjunct_premises_expand A B C).
+    exact (conjunct_implications_factorise A B C).
+Qed.
+
+
+Theorem excluded_middle_irrefutable: forall A: Prop, ~~(A \/ ~A).
+Proof.
+  intros A.
+  unfold not.
+  intros refute_excl_mid.
+  pose (refute_irrefutable := disjunct_premises_expand _ _ _ refute_excl_mid).
+  destruct refute_irrefutable as [refute_a can't_refute_a].
+  exact (can't_refute_a refute_a).
+Qed.

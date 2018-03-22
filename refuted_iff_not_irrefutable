@@ -1,0 +1,36 @@
+Theorem proof_is_irrefutable: forall A: Prop, A -> ~~A.
+Proof.
+  intros A.
+  intros proof.
+  unfold not.
+  intros refutation.
+  exact (refutation proof).
+Qed.
+
+Theorem refuted_iff_not_irrefutable: forall A: Prop, ~A <-> ~~~A.
+Proof.
+  intros A.
+  unfold iff, not.
+  refine (conj _ _).
+
+  intros refutation irrefutable.
+  exact (irrefutable refutation).
+
+  intros not_irrefutable proof.
+  pose (irrefutable := proof_is_irrefutable _ proof).
+  exact (not_irrefutable irrefutable).
+Qed.
+
+
+
+Theorem refutation_is_stable:
+  forall A: Prop,
+    ~~~A -> ~A.
+Proof.
+  intros A.
+  unfold not.
+  intros a_irrefutably_refutable.
+  intros suppose_a.
+  pose (a_irrefutable := proof_is_irrefutable _ suppose_a).
+  case (a_irrefutably_refutable a_irrefutable).
+Qed.

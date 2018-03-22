@@ -1,0 +1,15 @@
+Section thing.
+
+Variable A: Set.
+
+Variable B: A -> Prop.
+
+Theorem existential_application: forall C: Prop,
+  ((exists x: A, B x) -> C) -> forall x: A, (B x) -> C.
+Proof.
+  intros C.
+  intros motive.
+  intros witness proof_of_B.
+  pose (proof_of_C := motive (ex_intro _ witness proof_of_B)).
+  exact proof_of_C.
+Qed.

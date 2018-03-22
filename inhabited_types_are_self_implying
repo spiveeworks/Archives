@@ -1,0 +1,14 @@
+Theorem inhabited_types_are_their_identity:
+  forall A: Prop,
+    A -> (A <-> (A -> A)).
+Proof.
+  intros A.
+  intros suppose_A.
+  unfold iff.
+  refine (conj _ _).
+    intros _ _.
+    exact suppose_A.
+
+    intros _.
+    exact suppose_A.
+Qed.

@@ -1,0 +1,72 @@
+
+Theorem left_identity:
+  forall n: nat,
+    n + 0 = n.
+Proof.
+  intros n.
+  elim n.
+  reflexivity.
+  intros k.
+  intros inductive_hypothesis.
+  simpl.
+  rewrite inductive_hypothesis.
+  reflexivity.
+Qed.
+
+Theorem swap_succ:
+  forall x y: nat,
+    x + S y = S x + y.
+Proof.
+  intros x y.
+  elim x.
+  reflexivity.
+  intros k.
+  simpl.
+  intros IH.
+  rewrite IH.
+  reflexivity.
+Qed.
+
+Theorem nat_commutative_under_addition:
+  forall x y: nat,
+    x + y = y + x.
+Proof.
+  intros x y.
+  elim x.
+
+  rewrite (left_identity y).
+  reflexivity.
+
+  intros k.
+  intros IH.
+  simpl.
+  rewrite IH.
+  rewrite swap_succ.
+  reflexivity.
+Qed.
+
+Theorem nat_associative_under_addition:
+  forall x y z: nat,
+    x + (y + z) = (x + y) + z.
+Proof.
+  intros x y z.
+  elim x.
+  reflexivity.
+  intros k IH.
+  simpl.
+  rewrite IH.
+  reflexivity.
+Qed.
+
+Theorem nat_nothing_begets_nothing:
+  forall x: nat,
+    x * 0 = 0.
+Proof.
+  intros x.
+  elim x.
+  reflexivity.
+  intros k.
+  intros IH.
+  simpl.
+  exact IH.
+Qed.

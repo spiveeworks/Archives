@@ -1,0 +1,69 @@
+Require Import Bool.
+
+(*Theorem *)
+
+Theorem eqb_implies_eq: forall a b: nat, Is_true (Nat.eqb a b) -> a = b.
+Proof.
+  intros a b.
+  elim a; elim b.
+    reflexivity.
+
+    intros n IHn.
+    simpl.
+    intros refuted.
+    case refuted.
+
+    intros n IHn.
+    simpl.
+    intros refuted.
+    case refuted.
+
+    intros m IHm.
+    intros n IHn.
+    simpl.
+    intros base.
+    case n.
+      case m.
+        reflexivity.
+        intros n'.
+        injective.
+        discriminate.
+
+Theorem eqn_is_eq: forall a b: nat, Is_true (Nat.eqb a b) <-> a = b.
+Proof.
+  intros a b.
+  unfold iff.
+  refine (conj _ _).
+  elim a; elim b.
+    reflexivity.
+
+    intros n IHn.
+    simpl.
+    intros refuted.
+    case refuted.
+
+    intros n IHn.
+    simpl.
+    intros refuted.
+    case refuted.
+
+    intros m IHm.
+    intros n IHn.
+    simpl.
+    intros base.
+    pose (IHm' := IHm _ base).
+  case b.
+  reflexivity.
+  intros n.
+  simpl.
+  intros absurd.
+  case absurd.
+  intros n IHn.
+  simpl.
+  elim b.
+  simpl.
+  intros absurd.
+  case absurd.
+  intros m IHm.
+  intros base.
+  pose (equal := IHn base).

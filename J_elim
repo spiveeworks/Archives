@@ -1,0 +1,28 @@
+Section J_elim.
+Variable T: Type.
+Variable C: forall a b: T, a = b -> Type.
+Variable a b: T.
+Variable p: a = b.
+Theorem J_elim: C a a (eq_refl a) -> C a b p.
+  intros z.
+  rewrite <- p.
+  exact z.
+Qed.
+Print J_elim.
+
+J_elim =
+let Top_J_elim_internal_eq_rew_dep :=
+  fun (A : Type) (x : A) (P : forall a : A, x = a -> Type) 
+    (f : P x eq_refl) (y : A) (e : x = y) =>
+  match e as e0 in (_ = y0) return (P y0 e0) with
+  | eq_refl => f
+  end in
+fun z : C a a eq_refl =>
+Top_J_elim_internal_eq_rew_dep T a (fun (b : T) (p : a = b) => C a b p) z b p
+     : C a a eq_refl -> C a b p.
+
+J_elim = fun z : C a a eq_refl =>
+  match p as p0 in (_ = b0) return (C a b0 p0) with
+  | eq_refl => z
+  end.
+
