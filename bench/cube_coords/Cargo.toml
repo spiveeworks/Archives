@@ -1,0 +1,11 @@
+[package]
+name = "cube_coords"
+version = "0.1.0"
+authors = ["SpiveeWorks <spiveehere@gmail.com>"]
+
+[dependencies]
+
+[lib]
+name = "cube_coords"
+path = "cube_coords.rs"
+
