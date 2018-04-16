@@ -47,3 +47,49 @@ siftDown1 x t@(Node th tl tr)
   | x > th = Node x t Empty
   | otherwise = Node th (siftDown x tl tr) Empty
 
+deleteMax :: Ord a => Tree a -> Maybe (a, Tree a)
+deleteMax Empty = Nothing
+deleteMax (Node x Empty Empty) = Just (x, Empty)
+deleteMax t = Just (top, siftDown bottom l r)
+  where (bottom, Node top l r) = treeLast t
+
+treeLast (Node x Empty Empty) = (x, Empty)
+treeLast (Node x l Empty) = (x', Node x l' Empty)
+  where (x', l') = treeLast l
+treeLast (Node x l r) = (x', Node x l r')
+  where (x', r') = treeLast r
+
+
+applyN n f x = iterate f x !! n
+
+partialHeapSort n = finish . applyN n heapSortStep . start
+  where start xs = (heapify $ fromRowOrder xs, [])
+        finish (t, xs) = intoRowOrder t ++ xs
+
+
+heapSortStep :: Ord a => (Tree a, [a]) -> (Tree a, [a])
+heapSortStep (Empty, sorted) = (Empty, sorted)
+heapSortStep (t, sorted) = (t', x:sorted)
+  where Just (x, t') = deleteMax t
+
+
+split :: [a] -> ([a], [a])
+split xs = splitAt (length xs + 1) xs
+
+merge :: Ord a => [a] -> [a] -> [a]
+merge (x:xs) (y:ys)
+  | x < y = x : merge xs (y:ys)
+  | otherwise = y : merge (x:xs) ys
+
+mergeSort :: Ord a => [a] -> [a]
+mergeSort [] = []
+mergeSort [a] = [a]
+mergeSort xs = uncurry merge $ split xs
+
+
+partition :: Int -> [a] -> ([a], a, [a])
+
+
+partitionBad :: Int -> [a] -> [a]
+partitionBad n xs = l ++ pivot ++ init r ++ [last r]
+  where (l, pivot, r) = partition n xs
