@@ -1,5 +1,7 @@
 import Control.Monad
 import Control.Applicative
+import Control.Category
+import Prelude(foldr, Semigroup((<>)), Monoid(mempty))
 
 data CPSIO a b = Read (a -> CPSIO a b) | Write b (CPSIO a b) | Terminate
 
@@ -8,19 +10,15 @@ execute (Read f) (x: xs) = execute (f x) xs
 execute (Write y f) xs = y : execute f xs
 execute Terminate xs = []
 
-fromList :: [b] -> CPSIO a b
-fromList = foldMap return
+writeList :: CPSIO a b -> [b]  -> CPSIO a b
+writeList = foldr Write
 
-mapOne :: (a -> b) -> CPSIO a b -> CPSIO a b
-mapOne f cc = Read (\x -> Write (f x) cc)
+applyFun :: (a -> b) -> CPSIO a b -> CPSIO a b
+applyFun f cc = Read (\x -> Write (f x) cc)
 
-mapAll :: (a -> b) -> CPSIO a b
-mapAll f = go
-  where go = mapOne f go
-
-mapN f cc = go
-  where go 0 = cc
-        go n = mapOne f (go (n - 1))
+fromFun :: (a -> b) -> CPSIO a b
+fromFun f = go
+  where go = applyFun f go
 
 scanCPS f = go
   where go y = Write y (Read (go . f))
@@ -66,4 +64,13 @@ instance Monoid (CPSIO a b) where
 
 stateful :: ((s, a) -> (s, [b])) -> s -> CPSIO a b
 stateful f = go
-  where go s = Read (\x -> let (s', ys) = f (s, x) in foldr Write (go s') ys)
+  where go s = Read (\x -> let (s', ys) = f (s, x) in writeList (go s') ys)
+
+instance Category CPSIO where
+    id = fromFun id
+
+    Terminate . _ = Terminate
+    Write x p . xy = Write x (p . xy)
+    yz . Terminate = Terminate
+    Read f . Write x p = f x . p
+    yz . Read f = Read (\x -> yz . f x)
