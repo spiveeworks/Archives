@@ -63,3 +63,7 @@ instance Semigroup (CPSIO a b) where
 
 instance Monoid (CPSIO a b) where
     mempty = empty
+
+stateful :: ((s, a) -> (s, [b])) -> s -> CPSIO a b
+stateful f = go
+  where go s = Read (\x -> let (s', ys) = f (s, x) in fromList ys <|> go s')
