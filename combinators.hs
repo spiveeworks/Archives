@@ -72,3 +72,6 @@ instance Combinator IotaTree where
   iota = Iota
 
 
+iterateIota :: Combinator a => [a]
+iterateIota = map eval $ iterate helper iota
+  where helper x = iota $$ x
