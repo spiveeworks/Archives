@@ -1,3 +1,5 @@
+import Control.Monad
+import Control.Applicative
 
 data CPSIO a b = Read (a -> CPSIO a b) | Write b (CPSIO a b) | Terminate
 
@@ -5,6 +7,9 @@ execute :: CPSIO a b -> [a] -> [b]
 execute (Read f) (x: xs) = execute (f x) xs
 execute (Write y f) xs = y : execute f xs
 execute Terminate xs = []
+
+fromList :: [b] -> CPSIO a b
+fromList = foldMap return
 
 mapOne :: (a -> b) -> CPSIO a b -> CPSIO a b
 mapOne f cc = Read (\x -> Write (f x) cc)
@@ -26,25 +31,35 @@ instance Functor (CPSIO a) where
             go (Write x p) = Write (f x) (go p)
             go Terminate = Terminate
 
-cpsSeq :: CPSIO a b -> CPSIO a b -> CPSIO a b
-Read f `cpsSeq` cc = Read (\x -> f x `cpsSeq` cc)
-Write x p `cpsSeq` cc = Write x (p `cpsSeq` cc)
-Terminate `cpsSeq` cc = cc
+premap :: (a -> b) -> CPSIO b c -> CPSIO a c
+premap f = go
+  where go (Read g) = Read (go . g . f)
+        go (Write x p) = Write x (go p)
+        go Terminate = Terminate
 
 instance Applicative (CPSIO a) where
     pure x = Write x Terminate
 
     Read ff <*> thing = Read (\x -> ff x <*> thing)
-    Write f p <*> thing = fmap f thing `cpsSeq` (p <*> thing)
+    Write f p <*> thing = fmap f thing <|> p <*> thing
     Terminate <*> thing = Terminate
 
-cpsJoin :: CPSIO a (CPSIO a b) -> CPSIO a b
-cpsJoin (Read f) = Read (cpsJoin . f)
-cpsJoin (Write a p) = a `cpsSeq` cpsJoin p
-cpsJoin Terminate = Terminate
-
 instance Monad (CPSIO a) where
-    return = pure
+    Read f >>= g = Read (\x -> f x >>= g)
+    Write x p >>= g = g x <|> (p >>= g)
+    Terminate >>= g = Terminate
 
-    mx >>= f = cpsJoin (fmap f mx)
+instance Alternative (CPSIO a) where
+    empty = Terminate
 
+    Read f <|> cc = Read (\x -> f x <|> cc)
+    Write x p <|> cc = Write x (p <|> cc)
+    Terminate <|> cc = cc
+
+instance MonadPlus (CPSIO a)
+
+instance Semigroup (CPSIO a b) where
+    (<>) = (<|>)
+
+instance Monoid (CPSIO a b) where
+    mempty = empty
