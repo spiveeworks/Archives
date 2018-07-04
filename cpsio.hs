@@ -1,7 +1,7 @@
 import Control.Monad
 import Control.Applicative
 import Control.Category
-import Prelude(foldr, Semigroup((<>)), Monoid(mempty))
+import Prelude(foldr, Semigroup((<>)), Monoid(mempty), Either(Left, Right), reverse)
 
 data CPSIO a b = Read (a -> CPSIO a b) | Write b (CPSIO a b) | Terminate
 
@@ -74,3 +74,21 @@ instance Category CPSIO where
     yz . Terminate = Terminate
     Read f . Write x p = f x . p
     yz . Read f = Read (\x -> yz . f x)
+
+tieOutputs :: CPSIO (Either a b) (Either a c) -> CPSIO b c
+tieOutputs = tieOutputs_ ([], [])
+tieOutputs_ (x:xs, ys) (Read f) = tieOutputs_ (xs, ys) (f (Left x))
+tieOutputs_ ([], []) (Read f) = Read (\x -> tieOutputs_ ([], []) (f (Right x)))
+tieOutputs_ ([], ys) (Read f) = tieOutputs_ (reverse ys, []) (Read f)
+tieOutputs_ (xs, ys) (Write (Left y) p) = tieOutputs_ (xs, y:ys) p
+tieOutputs_ (xs, ys) (Write (Right y) p) = Write y (tieOutputs_ (xs, ys) p)
+tieOutputs_ _ Terminate = Terminate
+
+data AndOr a b = JustLeft a | JustRight b | Both a b
+programPair :: CPSIO a b -> CPSIO a c -> CPSIO a (AndOr b c)
+programPair (Write x p1) (Write y p2) = Write (Both x y) (programPair p1 p2)
+programPair (Write x p1) p2 = Write (JustLeft x) (programPair p1 p2)
+programPair p1 (Write y p2) = Write (JustRight y) (programPair p1 p2)
+programPair (Read f) (Read g) = Read (\x -> programPair (f x) (g x))
+programPair Terminate _ = Terminate
+programPair _ Terminate = Terminate
