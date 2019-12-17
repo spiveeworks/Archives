@@ -38,8 +38,14 @@ finishHuffman n [] = Branch []
 finishHuffman n [(r, x)] = x
 finishHuffman n xs = finishHuffman n (iterateHuffman n xs)
 
+startHuffman :: Int -> FreqMap (Tree a) -> FreqMap (Tree a)
+startHuffman n xs = result where
+  k = length xs `mod` (n - 1)
+  k' = if k == 0 then n - 1 else k
+  result = if k' == 1 then xs else iterateHuffman k' xs
+
 huffman :: Int -> FreqMap a -> Tree a
-huffman n = finishHuffman n . initFreqMap
+huffman n = finishHuffman n . startHuffman n . initFreqMap
 
 -- total ~= 100 000
 freqs :: FreqMap Char
@@ -77,45 +83,45 @@ main = print (huffman 4 freqs)
 
 result :: Tree Char
 result = Branch [
+  Leaf 'e',
   Branch [
-    Leaf 'o',
+    Leaf 'd',
+    Leaf 'r',
+    Leaf 'h',
     Branch [
-      Leaf 'p',
-      Leaf 'y',
-      Leaf 'g',
-      Leaf 'c'
-    ],
-    Leaf 'a',
-    Leaf 't'
-  ],
-  Branch [
-    Branch [
-      Leaf 'f',
-      Leaf 'm',
-      Leaf 'w',
-      Leaf 'u'
-    ],
-    Leaf 'e',
-    Branch [
-      Leaf 'l',
+      Leaf 'k',
       Branch [
+        Leaf 'x',
+        Leaf 'j',
         Branch [
           Leaf 'z',
-          Leaf 'q',
-          Leaf 'x',
-          Leaf 'j'
+          Leaf 'q'
         ],
-        Leaf 'v',
-        Leaf 'k',
-        Leaf 'b'
+        Leaf 'v'
       ],
-      Leaf 'd',
-      Leaf 'r'
-    ],
+      Leaf 'b',
+      Leaf 'p'
+    ]
+  ],
+  Branch [
+    Leaf 's',
+    Leaf 'n',
+    Leaf 'i',
+    Leaf 'o'
+  ],
+  Branch [
+    Leaf 'a',
     Branch [
-      Leaf 'h',
-      Leaf 's',
-      Leaf 'n',
-      Leaf 'i'
+      Leaf 'y',
+      Leaf 'g',
+      Leaf 'c',
+      Leaf 'f'
+    ],
+    Leaf 't',
+    Branch [
+      Leaf 'm',
+      Leaf 'w',
+      Leaf 'u',
+      Leaf 'l'
     ]
   ]]
