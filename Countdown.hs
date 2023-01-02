@@ -1,5 +1,13 @@
 data Expr = L Int | Expr `Plus` Expr | Expr `Minus` Expr
-            | Expr `Times` Expr | Expr `Divide` Expr deriving Show
+            | Expr `Times` Expr | Expr `Divide` Expr
+
+instance Show Expr where
+  showsPrec _ (L x) = (++) (show x)
+  showsPrec i (x `Plus` y) = (++) "(" . showsPrec i x . (++) " + " . showsPrec i y . (++) ")"
+  showsPrec i (x `Minus` y) = (++) "(" . showsPrec i x . (++) " - " . showsPrec i y . (++) ")"
+  showsPrec i (x `Times` y) = (++) "(" . showsPrec i x . (++) " * " . showsPrec i y . (++) ")"
+  showsPrec i (x `Divide` y) = (++) "(" . showsPrec i x . (++) " / " . showsPrec i y . (++) ")"
+
 
 combinations :: [Int] -> [[Int]]
 combinations [] = [[]]
